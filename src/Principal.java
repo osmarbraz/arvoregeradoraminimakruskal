@@ -146,15 +146,23 @@ public class Principal {
         }
         return vertices;
     }    
- 
-    public static int[][] algoritmoKruskal(int[][] G, int r) {
+    
+    /**
+     * Executa o algoritmo de Kruskal para Ãrvore geradorda Mínima.
+     * 
+     * Complexidade do algoritmo é O(E lg E)
+     * 
+     * @param G Matriz de indicência da árvore      
+     * @return Vetor com a lista das arestas de menor custo
+     */ 
+    public static int[][] algoritmoKruskal(int[][] G) {
         //Vetor das Arestas de retorno
         int[][] A;
          
         //Converte a matriz em uma lista de vértices
         List arestas = getMatrizVertices(G); 
         
-        //Quantidade de arestas
+        //Quantidade de arestas da lista
         int n = arestas.size();
                                      
         //Inicializa os vetores
@@ -169,7 +177,7 @@ public class Principal {
             if (e1[2] < e2[2]) return -1;
             if (e1[2] > e2[2]) return 1;
             return 0;
-        });  
+        });                                                 // O(E lgE
                
         int linha = 0;
         //Para cada aresta na ordem
@@ -208,11 +216,8 @@ public class Principal {
         
         System.out.println("Árvore Geradora Minima - Algoritmo de Kruskal");
 
-        //Raiz da árvore
-        int r = destrocar('a');
-
         //Executa o algoritmo
-        int[][] g = algoritmoKruskal(G, r);
+        int[][] g = algoritmoKruskal(G);
 
         //Mostra o menor custo
         mostrarCaminho(g, n);         
