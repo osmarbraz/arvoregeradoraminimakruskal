@@ -1,7 +1,6 @@
 # arvoregeradoraminimakruskal
-Universidade Federal de Santa Catarina - UFSC
-
-Departamento de Informática e Estatística - INE
+Universidade Federal de Santa Catarina - UFSC<br>
+Departamento de Informática e Estatística - INE<br>
 
 Programa de Pós-Graduação em Ciências da Computação - PROPG
 
