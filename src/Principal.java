@@ -10,6 +10,7 @@ import java.util.List;
  * Prof Alexandre Gonçalves da Silva 
  *
  * Baseado nos slides 111 da aula do dia 20/10/2017 
+ *
  * Página 459 Cormen 3a Ed
  *
  * Árvore Geradora Mínima(MST) com o Algoritmo de Kruskal
@@ -46,8 +47,8 @@ public class Principal {
      * 
      * Página 415 Cormen 3a Ed
      * 
-     * @param x raiz
-     * @param y raiz
+     * @param x Primeiro elemento
+     * @param y Segundo elemento
      */
     public static void link(int x, int y){
         if (rank[x] > rank[y]) {
@@ -61,7 +62,7 @@ public class Principal {
     }
     
     /**
-     * Realiza a uniào de dois elementos.
+     * Realiza a união de dois elementos.
      * 
      * Página 415 Cormen 3a Ed
      * 
@@ -211,16 +212,15 @@ public class Principal {
                 {8, 11,0, 0, 0, 0, 1, 0, 7}, //h
                 {0, 0, 2, 0, 0, 0, 6, 7, 0}};//i
 
-         //Quantidade de vértices
+        //Quantidade de vértices
         int n = G.length;
         
-        System.out.println("Árvore Geradora Minima - Algoritmo de Kruskal");
+        System.out.println("Árvore Geradora Mínima - Algoritmo de Kruskal");
 
         //Executa o algoritmo
         int[][] g = algoritmoKruskal(G);
 
         //Mostra o menor custo
-        mostrarCaminho(g, n);         
-        
+        mostrarCaminho(g, n);                 
     }
 }
