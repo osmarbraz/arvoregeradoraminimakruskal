@@ -11,7 +11,7 @@ import java.util.List;
  *
  * Baseado nos slides 111 da aula do dia 20/10/2017 
  *
- * Página 459 Cormen 3a Ed
+ * Página 459 Thomas H. Cormen 3a Ed
  *
  * Árvore Geradora Mínima(MST) com o Algoritmo de Kruskal
  */
@@ -29,7 +29,7 @@ public class Principal {
     /**
      * Encontra a raiz de um conjunto.
      * 
-     * Página 415 Cormen 3a Ed
+     * Página 415 Thomas H. Cormen 3a Ed
      * 
      * @param x Elemento a ser procurado.
      * @return a raiz do conjunto
@@ -45,7 +45,7 @@ public class Principal {
     /**
      * Link realiza a ligação de dois elementos a serem unidos.
      * 
-     * Página 415 Cormen 3a Ed
+     * Página 415 Thomas H. Cormen 3a Ed
      * 
      * @param x Primeiro elemento
      * @param y Segundo elemento
@@ -64,7 +64,7 @@ public class Principal {
     /**
      * Realiza a união de dois elementos.
      * 
-     * Página 415 Cormen 3a Ed
+     * Página 415 Thomas H. Cormen 3a Ed
      * 
      * @param x Primeiro elemento
      * @param y Segundo elemento
@@ -76,7 +76,7 @@ public class Principal {
     /**
      * Cria o conjunto unitário de x.
      * 
-     * Página 415 Cormen 3a Ed
+     * Página 415 Thomas H. Cormen 3a Ed
      * 
      * @param x conjunto a ser criado
      */
