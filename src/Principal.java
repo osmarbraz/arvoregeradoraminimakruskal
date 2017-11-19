@@ -1,7 +1,3 @@
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
-
 /*
  * Universidade Federal de Santa Catarina - UFSC
  * Departamento de Informática e Estatística - INE
@@ -19,6 +15,10 @@ import java.util.List;
 /**
  * @author Osmar de Oliveira Braz Junior
  */
+
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Principal {        
   
