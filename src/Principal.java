@@ -193,8 +193,7 @@ public class Principal {
             }
         }
         return A;        
-     }
-    
+     }    
 
     public static void main(String args[]) {
         //Matriz de incidência para um grafo direcionado     
