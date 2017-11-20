@@ -122,9 +122,9 @@ public class Principal {
         //Guarda o custo do caminho
         int custo = 0;
         //Percorre os as arestas de A
-        //O laço começa em 0 e desconta um elemento pois se repete
+        //O laço começa em 0 e desconta um elemento pois ele se repete
         for (int v = 0; v < n-1; v++) {           
-           System.out.println(trocar(A[v][0]) + "->" + trocar(A[v][1]) + " custo:" + A[v][2]);                              
+           System.out.println(trocar(A[v][0]) + " -> " + trocar(A[v][1]) + " custo: " + A[v][2]);                              
            custo = custo + A[v][2];        }
         System.out.println("Custo Total:" + custo);
     }
