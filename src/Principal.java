@@ -172,6 +172,7 @@ public class Principal {
         A = new int[n][]; //Vetor de retorno
         pi = new int[n];
         rank = new int[n];
+        //Cria a árvore para cada vértice
         for (int v = 0; v < n; v++) {
             makeSet(v);                
         }
@@ -183,15 +184,15 @@ public class Principal {
         });                                                 // O(E lgE
                
         int linha = 0;
-        //Para cada aresta na ordem
+        //Para cada aresta na ordem anterior
         for(int i=0; i<arestas.size();i++){            
             int[] vertice = (int[])arestas.get(i);
             int u = findSet(vertice[0]);
             int v = findSet(vertice[1]);
-            if (u != v) {
+            if (u != v) { //Estão em árvores diferentes
                 A[linha] = vertice;
                 linha = linha + 1;                
-                union(u,v);
+                union(u,v);//Unir as duas árvores
             }
         }
         return A;        
