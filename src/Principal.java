@@ -132,7 +132,7 @@ public class Principal {
     /**
      * Gera um vetor de arestas e pesos.
      * @param G Matriz de adjacência do grafo
-     * @return Um vetor de areastas e pesos.
+     * @return Um vetor de arestas e pesos.
      */   
     public static List getMatrizVertices(int[][] G){
         int n = G.length;
@@ -141,6 +141,8 @@ public class Principal {
             for (int j = 0; j < n; j++) {
                 //Somente para o triângulo superior
                 if ((i<j)&&(G[i][j]!=0)){
+                    //Cria um vetor de 3 elementos para conter                     
+                    //[0]=u(origem), [1]=v(destino), [2]=w(peso)
                     vertices.add(new int[]{i,j,G[i][j]});
                 }            
             }            
@@ -149,7 +151,7 @@ public class Principal {
     }    
     
     /**
-     * Executa o algoritmo de Kruskal para Ãrvore geradorda Mínima.
+     * Executa o algoritmo de Kruskal para Ãrvore geradora Mínima.
      * 
      * Complexidade do algoritmo é O(E lg E)
      * 
