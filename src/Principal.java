@@ -25,7 +25,9 @@ public class Principal {
     //Vetor dos pais de um vértice
     static int[] pi;         
     //d[x] armazena o instante de descoberta de x.
-    static int[] d;
+    //Cada nó x possui um “posto” rank[x] que ´e um limitante superior para a altura de x.
+    //Equivale a d[x]
+    static int[] rank;
 
     /**
      * Encontra a raiz de um conjunto.
@@ -52,12 +54,12 @@ public class Principal {
      * @param y Segundo elemento
      */
     public static void link(int x, int y){
-        if (d[x] > d[y]) {
+        if (rank[x] > rank[y]) {
             pi[y] = x;
         } else  {
             pi[x] = y;
-            if (d[y] == d[x]) {
-                d[y] = d[y] + 1;
+            if (rank[y] == rank[x]) {
+                rank[y] = rank[y] + 1;
             }
         }
     }
@@ -83,7 +85,7 @@ public class Principal {
      */
     public static void makeSet(int x){
         pi[x] = x;
-        d[x] = 0;
+        rank[x] = 0;
     }
  
     /**
@@ -172,7 +174,7 @@ public class Principal {
         //Inicializa os vetores
         A = new int[n][]; //Vetor de retorno
         pi = new int[n];
-        d = new int[n];
+        rank = new int[n];
         //Cria a árvore para cada vértice
         for (int v = 0; v < n; v++) {
             makeSet(v);                
