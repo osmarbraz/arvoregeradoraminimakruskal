@@ -95,8 +95,12 @@ public class Principal {
      * @return Uma String com a letra da posição i
      */
     public static String trocar(int i) {
-        String letras = "abcdefghi";
-        return letras.charAt(i) + "";
+        String letras = "abcdefghi";        
+        if ((i >=0) && (i<=letras.length())) {
+            return letras.charAt(i) + "";
+        } else {
+            return "-";
+        }
     }
 
     /**
