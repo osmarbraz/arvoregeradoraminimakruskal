@@ -24,7 +24,8 @@ public class Principal {
   
     //Vetor dos pais de um vértice
     static int[] pi;         
-    static int[] rank;
+    //d[x] armazena o instante de descoberta de x.
+    static int[] d;
 
     /**
      * Encontra a raiz de um conjunto.
@@ -51,12 +52,12 @@ public class Principal {
      * @param y Segundo elemento
      */
     public static void link(int x, int y){
-        if (rank[x] > rank[y]) {
+        if (d[x] > d[y]) {
             pi[y] = x;
         } else  {
             pi[x] = y;
-            if (rank[y] == rank[x]) {
-                rank[y] = rank[y] + 1;
+            if (d[y] == d[x]) {
+                d[y] = d[y] + 1;
             }
         }
     }
@@ -82,7 +83,7 @@ public class Principal {
      */
     public static void makeSet(int x){
         pi[x] = x;
-        rank[x] = 0;
+        d[x] = 0;
     }
  
     /**
@@ -171,7 +172,7 @@ public class Principal {
         //Inicializa os vetores
         A = new int[n][]; //Vetor de retorno
         pi = new int[n];
-        rank = new int[n];
+        d = new int[n];
         //Cria a árvore para cada vértice
         for (int v = 0; v < n; v++) {
             makeSet(v);                
@@ -223,6 +224,6 @@ public class Principal {
         int[][] g = algoritmoKruskal(G);
 
         //Mostra o menor custo
-        mostrarCaminho(g, n);                 
+        mostrarCaminho(g, n);
     }
 }
