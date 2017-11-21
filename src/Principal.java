@@ -220,7 +220,7 @@ public class Principal {
         //Quantidade de vértices
         int n = G.length;
         
-        System.out.println("Árvore Geradora Mínima - Algoritmo de Kruskal");
+        System.out.println(">>> Árvore Geradora Mínima - Algoritmo de Kruskal <<<");
 
         //Executa o algoritmo
         int[][] g = algoritmoKruskal(G);
