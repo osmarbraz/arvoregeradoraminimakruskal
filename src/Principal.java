@@ -16,6 +16,7 @@
  * @author Osmar de Oliveira Braz Junior
  */
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -37,9 +38,9 @@ public class Principal {
      * @param x Elemento a ser procurado.
      * @return a raiz do conjunto
      */
-    public static int findSet(int x) {        
+    public static int findSet(int x) {          
         int p = pi[x];
-        if (x != p) {
+        if (x != p) {            
             p = findSet(p);
         }
         return p;
@@ -53,12 +54,12 @@ public class Principal {
      * @param x Primeiro elemento
      * @param y Segundo elemento
      */
-    public static void link(int x, int y){
-        if (rank[x] > rank[y]) {
+    public static void link(int x, int y){        
+        if (rank[x] > rank[y]) {            
             pi[y] = x;
-        } else  {
+        } else  {            
             pi[x] = y;
-            if (rank[y] == rank[x]) {
+            if (rank[y] == rank[x]) {                
                 rank[y] = rank[y] + 1;
             }
         }
@@ -189,14 +190,14 @@ public class Principal {
             if (e1[2] > e2[2]) return 1;
             return 0;
         });                                                 // O(E lg E)
-               
+        
         int linha = 0;
         //Para cada aresta na ordem anterior
         for(int i=0; i<arestas.size();i++){            
             int[] vertice = (int[])arestas.get(i);
             int u = findSet(vertice[0]);
             int v = findSet(vertice[1]);
-            if (u != v) { //Estão em árvores diferentes
+            if (u != v) { //Estão em árvores diferentes                
                 A[linha] = vertice;
                 linha = linha + 1;                
                 union(u,v);//Unir as duas árvores
