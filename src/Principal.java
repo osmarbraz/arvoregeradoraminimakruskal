@@ -188,7 +188,7 @@ public class Principal {
             if (e1[2] < e2[2]) return -1;
             if (e1[2] > e2[2]) return 1;
             return 0;
-        });                                                 // O(E lgE
+        });                                                 // O(E lg E)
                
         int linha = 0;
         //Para cada aresta na ordem anterior
