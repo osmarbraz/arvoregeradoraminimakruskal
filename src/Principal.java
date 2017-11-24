@@ -160,7 +160,7 @@ public class Principal {
     /**
      * Executa o algoritmo de Kruskal para Ãrvore geradora Mínima.
      * 
-     * Complexidade do algoritmo é O(E lg E)
+     * Complexidade do algoritmo é O(E log E) = O(E log V)
      * 
      * @param G Matriz de indicência da árvore      
      * @return Vetor com a lista das arestas de menor custo
