@@ -124,7 +124,8 @@ public class Principal {
      /**
      * Exibe a lista de arestas do menor custo
      *
-     * @param Lista das arestas a ser exibido o caminho e o custo
+     * @param A Matriz de adjacência da árvore  
+     * @param n Quantidade vértices do grafo
      */
     public static void mostrarCaminho(int[][] A, int n) {
         //Guarda o custo do caminho
@@ -207,7 +208,7 @@ public class Principal {
      }    
 
     public static void main(String args[]) {
-        //Matriz de incidência para um grafo direcionado     
+        //Matriz de adjacência para um grafo direcionado     
         //Grafo do slide 56 de 20/10/2017
                
         int G[][] =
