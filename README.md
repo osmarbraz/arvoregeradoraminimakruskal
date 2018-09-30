@@ -9,4 +9,5 @@ Baseado nos slides 111 da aula do dia 20/10/2017<br>
 Página 459 Thomas H. Cormen 3a Ed<br>
 <br>
 Árvore Geradora Mínima(MST) com o Algoritmo de Kruskal<br>
-Encontra uma árvore geradora mínima em um grafo conexo com pesos.
+Aplicações:<br>
+- Encontra uma árvore geradora mínima em um grafo não direcionado conexo com pesos.<br>

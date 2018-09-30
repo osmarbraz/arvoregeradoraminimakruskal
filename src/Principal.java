@@ -16,7 +16,6 @@
  * @author Osmar de Oliveira Braz Junior
  */
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
